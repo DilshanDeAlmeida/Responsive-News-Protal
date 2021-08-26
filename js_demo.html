@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function displayonetohundred() {
+            for (counter = 1; counter < 101; counter++) {
+                document.writeln(counter + "<br>");
+            }
+        }
+
+        function displaySquaresLessThanTwenty() {
+            var counter = 1;
+
+            while (counter < 21) {
+                document.writeln(Math.pow(counter, 2) + "<br>");
+                counter++;
+            }
+        }
+
+        function regExp() {
+            var regexp = /apple/i;
+            var msg = "I ate an apple";
+            var result = msg.replace(regexp, " mango");
+            document.writeln(result);
+        }
+
+        function codingChallengeTwelve() {
+            var inputNumber = 123456789;
+            try {
+                if (inputNumber.toString().length != 10) {
+                    throw ("not a 10 digit number");
+                } else {
+                    document.writeln("Accepted");
+                }
+            } catch (exception) {
+                document.writeln("Error: " + exception);
+            }
+            finally {
+                document.writeln("<br> Finally block executed no matter what");
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <label id="label1"> Default label name</label>
+    <input type="text" id="textbox1" placeholder="Enter text here">
+    <button id="newButton">Click here</button>
+    <br>
+
+    <script>
+        
+        function displayAlert() {
+            var textPresent = document.getElementById("textbox1").value;
+            document.getElementById("label1").innerHTML = textPresent;
+        }
+
+        document.getElementById("newButton").addEventListener("click", displayAlert);
+        
+        document.writeln(screen.width + " x " + screen.height);
+
+        document.writeln("<br>"+ window.location.href);
+        document.writeln("<br>"+ window.location.pathname);
+    
+    </script>
+
+</body>
+
+</html>
